@@ -1,12 +1,28 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { DistanciaComponent } from './formularios/distancia/distancia.component';
+import { ZodiacoComponent } from './formularios/zodiaco/zodiaco.component';
+import { AxbComponent } from './formularios/axb/axb.component';
+import { initFlowbite } from 'flowbite';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterLink } from '@angular/router';
+
+//import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, DistanciaComponent, ZodiacoComponent, AxbComponent, NavbarComponent, RouterLink],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularSegundo03';
+  //title = 'AngularSegundo03';
+  //title = 'Calculadora de Distancia';
+  //title = 'Zodiaco';
+  title = 'Multiplicación AxB';
+
+  ngOnInit(): void{
+    initFlowbite();
+  }
 }

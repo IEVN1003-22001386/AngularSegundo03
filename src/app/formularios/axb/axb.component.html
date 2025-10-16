@@ -1,0 +1,17 @@
+<div [formGroup]="formulario" style="text-align:center; margin-top:50px;">
+  <h2>Multiplicación usando sumas (A x B)</h2>
+
+  <label><b>A:</b></label>
+  <input type="number" min="0" formControlName="numeroA" placeholder="Ej: 4"><br><br>
+
+  <label><b>B:</b></label>
+  <input type="number" min="0" formControlName="numeroB" placeholder="Ej: 3"><br><br>
+
+  <button (click)="calcular()">Calcular</button>
+
+  <div style="margin-top:20px;">
+    <p>Número 1: {{ operacion.numero1 }}</p>
+    <p>Número 2: {{ operacion.numero2 }}</p>
+    <p><strong>Resultado: {{ operacion.resultado }}</strong></p>
+  </div>
+</div>

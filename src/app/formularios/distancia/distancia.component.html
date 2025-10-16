@@ -1,0 +1,39 @@
+<!--<div>
+    <h1>Multiplica 2 números</h1>
+    <form [formGroup]="formulario">
+        <div>
+            <label for="">Primer numero: </label>
+            <input formControlName="numero1" type="number">
+        </div>
+        <br>
+        <div>
+            <label for="">Segundo número: </label>
+            <input formControlName="numero2" type="number">
+        </div>
+        <br>
+        <button (click)="multNumeros()" type="submit">Multiplicar</button>
+
+        <h1>Resultado: {{resultado}}</h1>
+    </form>
+</div>-->
+<div [formGroup]="formulario">
+  <h1>Calcular distancia entre dos puntos</h1>
+
+  <label>X1:</label>
+  <input type="number" formControlName="x1"><br>
+
+  <label>Y1:</label>
+  <input type="number" formControlName="y1"><br>
+
+  <label>X2:</label>
+  <input type="number" formControlName="x2"><br>
+
+  <label>Y2:</label>
+  <input type="number" formControlName="y2"><br><br>
+
+  <button (click)="calcularDistancia()">CALCULAR</button>
+
+  <h2 *ngIf="mostrarResultado">
+    La distancia entre los dos puntos es: {{ distancia.resultado.toFixed(2) }}
+  </h2>
+</div> 
