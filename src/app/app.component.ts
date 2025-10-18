@@ -6,13 +6,14 @@ import { AxbComponent } from './formularios/axb/axb.component';
 import { initFlowbite } from 'flowbite';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterLink } from '@angular/router';
+import { TempComponent } from './tem/temp/temp.component';
 
 //import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DistanciaComponent, ZodiacoComponent, AxbComponent, NavbarComponent, RouterLink],
+  imports: [RouterOutlet, DistanciaComponent, ZodiacoComponent, AxbComponent, NavbarComponent, RouterLink, TempComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
