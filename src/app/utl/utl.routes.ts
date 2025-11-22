@@ -4,21 +4,21 @@ export default[
 
     {
         path:'listaalumnos',
-        loadComponent:()=>import('./alumnos/alumnos.component').then(c=>c.AlumnosComponent)
+        loadComponent:()=>import('./alumnos/alumnos.component')
     },
 
     {
         path:'agregar',
-        loadComponent:()=>import('./agregar/agregar.component').then(c=>c.AgregarComponent)
+        loadComponent:()=>import('./agregar/agregar.component')
     },
 
     {
-        path:'eliminar',
-        loadComponent:()=>import('./eliminar/eliminar.component').then(c=>c.EliminarComponent)
+        path:'eliminar/:id',
+        loadComponent:()=>import('./eliminar/eliminar.component')
     },
 
     {
-        path:'editar',
-        loadComponent:()=>import('./editar/editar.component').then(c=>c.EditarComponent)
+        path:'editar/:id',
+        loadComponent:()=>import('./editar/editar.component')
     },
 ]as Routes
